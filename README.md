@@ -1,5 +1,6 @@
 # QF-3218
- 
+Financial Econometrics
+
 ## Course Information
 * Course Number : QF-3218
 * Course Title : Financial Econometrics
