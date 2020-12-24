@@ -22,18 +22,20 @@ text[2] = p_tags[3].get_text()
 text[3] = p_tags[4].get_text()
 
 
-# In[ ]:
+# In[2]:
 
 
 jieba.set_dictionary('../dict.txt.big.txt')
-seg_list = jieba.cut(text[0])
-print(", ".join(seg_list))
-seg_list = jieba.cut(text[1])
-print(", ".join(seg_list))
-seg_list = jieba.cut(text[2])
-print(", ".join(seg_list))
-seg_list = jieba.cut(text[3])
-print(", ".join(seg_list))
+jieba.suggest_freq('賓大華頓學院', True)
+
+f = open('text.txt', 'w')
+
+for i in range(4):
+    seg_list = jieba.cut(text[i])
+    temp = " ".join(seg_list)
+    f.write(temp+'\n')
+
+f.close()
 
 
 # In[ ]:
